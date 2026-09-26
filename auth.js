@@ -1,0 +1,1 @@
+window.MalakAuth={config:{login:'/api/auth/login',register:'/api/auth/register',google:'/api/auth/google',me:'/api/auth/me',logout:'/api/auth/logout'},async me(){const r=await fetch(this.config.me,{credentials:'include'});return r.ok?r.json():null},async logout(){return fetch(this.config.logout,{method:'POST',credentials:'include'})}};

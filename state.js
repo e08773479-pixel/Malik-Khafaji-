@@ -1,0 +1,1 @@
+window.MalakState=(()=>{let state={user:null,theme:'dark',initialized:false};const listeners=new Set();const emit=()=>listeners.forEach(fn=>fn({...state}));return{get:()=>({...state}),set(p){state={...state,...p};emit()},subscribe(fn){listeners.add(fn);return()=>listeners.delete(fn)}}})();
